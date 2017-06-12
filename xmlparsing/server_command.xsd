@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="pi_com_link">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="header" type="meta_data"/>
+			<xs:element name="body" type="body_data"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:complexType name="meta_data">
+	<xs:sequence>
+		<xs:element name="source" type="xs:string"/>
+		<xs:element name="time_stamp" type="xs:string"/>
+		<xs:element name="signature" type="xs:string"/>
+		<xs:element name="message_id" type="xs:integer"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="body_data">
+	<xs:sequence>
+		<xs:element name="command">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="take_still"/>
+					<xs:enumeration value="get_orientation"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+	</xs:sequence>
+</xs:complexType>
+
+</xs:schema>
