@@ -26,4 +26,17 @@ xml_writer.export('filename')
 ```
 
 ### Sample output of generated XML file
-Link an example later.
+```xml
+<?xml version='1.0' encoding='UTF-8'?>
+<pi_com_link>
+  <header>
+    <source>intern5</source>
+    <time_stamp>2017-06-12 19:25:56.465237</time_stamp>
+    <signature>HAVE A HASH FUNCTION DO SOMETHING HERE</signature>
+    <message_id>1</message_id>
+  </header>
+  <body>
+    <command>take_still</command>
+  </body>
+</pi_com_link>
+```
